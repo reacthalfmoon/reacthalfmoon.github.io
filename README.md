@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started
 
-## Available Scripts
+## What is ReactHalfmoon?
+React components for [Halfmoon](https://www.gethalfmoon.com/), a front-end framework with a built-in dark mode.
 
-In the project directory, you can run:
+[Documentation](https://reacthalfmoon.github.io)
 
-### `yarn start`
+## Installation
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 1. Install the package
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```
+npm i reacthalfmoon
+```
 
-### `yarn test`
+### 2. Add the css file
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Using `link`
+In `public/index.html` link the css file
 
-### `yarn build`
+```html
+<link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.0/css/halfmoon.min.css" rel="stylesheet" />
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Or using `import`
+In `App.css` import the css file
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```css
+@import url("https://cdn.jsdelivr.net/npm/halfmoon@1.1.0/css/halfmoon.min.css");
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `yarn eject`
+### **Button Component**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```js
+import React from 'react';
+import { Button } from 'reacthalfmoon';
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+function App() {
+  return (
+      <Button color="primary">Primary</Button>
+  )
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+export default App
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### **Darkmode**
 
-## Learn More
+```js
+import React, {useState} from 'react';
+import { DarkmodeSwitch } from 'reacthalfmoon';
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+function App() {
+  const [darkmode, setDarkmode] = useState(false);
+  return (
+      <DarkmodeSwitch checked={darkmode} toggle={()=>{setDarkmode(!darkmode)}} />
+  )
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+export default App
+```
