@@ -13,11 +13,7 @@ React components for [Halfmoon](https://www.gethalfmoon.com/), a front-end frame
 npm i reacthalfmoon
 ```
 
-<<<<<<< HEAD
 If you see lot of vulnerabilities just run 
-=======
-If you see lot of vulnerability just run 
->>>>>>> a108d2ecbcd6d1c81e6d7ce4a5e6b51149dda8cf
 
 ```
 npm audit fix
