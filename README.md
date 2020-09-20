@@ -11,6 +11,12 @@ React components for [Halfmoon](https://www.gethalfmoon.com/), a front-end frame
 npm i reacthalfmoon
 ```
 
+If you see lot of vulnerabilities just run
+
+```
+npm audit fix
+```
+
 ### 2. Add the css file
 
 #### Using `link`
