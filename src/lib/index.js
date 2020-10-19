@@ -28,7 +28,7 @@ import DropdownMenu from './components/DropdownMenu';
 import Form from './components/Form';
 import FormRow from './components/FormRow';
 import FormText from './components/FormText';
-import FromGroup from './components/FromGroup';
+import FormGroup from './components/FormGroup';
 import Img from './components/Img';
 import Input from './components/Input';
 import InputGroup from './components/InputGroup';
@@ -96,7 +96,7 @@ export {
     Form,
     FormRow,
     FormText,
-    FromGroup,
+    FormGroup,
     Img,
     Input,
     InputGroup,
